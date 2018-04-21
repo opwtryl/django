@@ -1,8 +1,25 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 20 17:17:07 2018
 
-@author: Administrator
-"""
+<!DOCTYPE html>
 
-<br><a href='/rango/'>Main Page</a>
+{% load static %}
+
+<html>
+    <head><br /><strong>This tutorial has been put together by opwtryl.</strong>
+    </head>
+    
+    <body>
+        <div>
+            <a href='/rango/'>Main Page</a><br />
+            
+            
+            <table>
+            <tr>
+                <td>  <img src="{% static "rango/images/MuDaMuDa.jpg" %}" alt="MuDaMuDa" />
+                </td>
+                <td>   <img src="{{ MEDIA_URL }}ORaORa.jpg" alt="ORaORa" />
+                </td>
+            </tr>
+            </table>
+        </div>
+    </body>
+</html>

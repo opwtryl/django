@@ -1,8 +1,25 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Apr 20 15:54:53 2018
 
-@author: Administrator
-"""
+<!DOCTYPE html>
 
-<br><a href='about/'>About</a>
+{% load static %}
+
+<html>
+
+    <head>
+        <title>Rango</title>
+    </head>
+    
+    <body>
+        <h1>Rango says ...</h1>
+        <div>
+            hey there partner!<br />
+            <strong>{{boldmessage}}</strong><br />
+        </div>
+        <div>
+            <a href="/rango/about/">About</a><br />
+            <img src="{% static "rango/images/TheWorld.jpg" %}" 
+            alt="Picture of TheWorld" />
+            
+        </div>
+    </body>
+</html>
