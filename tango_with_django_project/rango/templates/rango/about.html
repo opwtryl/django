@@ -1,14 +1,14 @@
-
-<!DOCTYPE html>
-
+{% extends "rango/base.html" %}
 {% load static %}
 
-<html>
-    <head><br /><strong>This tutorial has been put together by opwtryl.</strong>
-    </head>
+{% block title_block %}
+    <strong>This tutorial has been put together by opwtryl.</strong>
+{% endblock title_block %}
+
+{% block body_block %}
+    <strong>This tutorial has been put together by opwtryl.</strong>
     
-    <body>
-        <div>
+    <div>
             <a href='/rango/'>Main Page</a><br />
             
             
@@ -21,5 +21,4 @@
             </tr>
             </table>
         </div>
-    </body>
-</html>
+{% endblock body_block %}

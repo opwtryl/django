@@ -1,9 +1,12 @@
-<!DCOTYPE html>
-	
-	<body>
-		<div>
-		
-		{% if category %}
+{% extends "rango/base.html" %}
+{% load staticfiles %}
+
+{% block title_block %}
+	Add a Page to {{ category.slug }}
+{% endblock title_block %}	
+
+{% block body_block %}
+	{% if category %}
 		
         <h1>Add a Page to {{ category.slug }}</h1>
 
@@ -27,9 +30,4 @@
 			The specified category does not exist!
 		{% endif%}
 		  
-		  
-		  
-		
-		</div>
-	</body>
-</html>
+{% endblock body_block %}
