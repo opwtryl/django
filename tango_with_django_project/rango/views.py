@@ -7,6 +7,7 @@ from rango.forms import CategoryForm, PageForm, UserForm, UserProfileForm
 # Create your views here.
 from rango.models import Category, Page
 from datetime import datetime
+from rango.bing_search import run_query
 
 
 def get_server_side_cookie(request, cookie, default_val=None):
@@ -100,6 +101,36 @@ def add_page(request, category_name_slug):
 
     context_dict = {'form': form, 'category': category}
     return render(request, 'rango/add_page.html', context_dict)
+
+
+def serach(request):
+    result_list = []
+    if request.method == 'POST':
+        query = request.POST['query'].strip()
+        if query:
+            result_list = run_query(query)
+
+    render(request, 'rango/search.html', {'result_list':result_list})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # def register(request):
