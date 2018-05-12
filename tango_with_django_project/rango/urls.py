@@ -11,7 +11,12 @@ urlpatterns = [
     # ?P<name>pattern ,named regular expression groups
     path('category/<category_name_slug>/',
          views.show_category, name='show_category'),
-    path('search/', views.serach, name='search')
+    # path('search/', views.search, name='search'),
+    path('goto/', views.track_url, name='goto'),# 构造出重定向源URL
+    path('register_profile/', views.register_profile, name='register_profile'),
+    path('profile/<username>',views.profile,name='profile'),
+    path('profiles/',views.list_profiles,name='list_profiles')
+
     # path('register/', views.register, name='register'),
     # path('login/', views.user_login, name='login'),
     # path('restricted/', views.restricted, name='restricted'),

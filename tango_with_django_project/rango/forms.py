@@ -46,6 +46,8 @@ class UserForm(forms.ModelForm):
 
 class UserProfileForm(forms.ModelForm):
     """docstring for UserProfile"""
+    website = forms.URLField(required=False)
+    picture = forms.ImageField(required=False)
     class Meta:
         model = UserProfile
         fields = ('website', 'picture')

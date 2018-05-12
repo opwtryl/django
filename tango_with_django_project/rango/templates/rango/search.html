@@ -7,7 +7,7 @@
 	<div>
 		<h1>Search with rango</h1>
 		<br/>
-		<form action="{% url 'search' %}" class="form-inline" id="user_form" method="post">
+		<form action="{% url 'rango:search' %}" class="form-inline" id="user_form" method="post">
 			{% csrf_token %}
 			<div class="form-group">
 				<input type="text" class="form-control" size="50" name="query" value="" id="query">

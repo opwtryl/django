@@ -13,7 +13,7 @@
 
       <title>Rango - {% block title_block %}How to Tango with Django!{% endblock %}</title>
       <!-- Bootstrap core CSS -->
-    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css">
 
     <!-- Custom styles for this template -->
     <link href="http://v4-alpha.getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
@@ -46,6 +46,12 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'auth_logout' %}?next=/rango/">Logout</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'rango:list_profiles' %}">List Profiles</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'rango:profile' user.username%}">Profile</a>
+            </li>
             
         {% else %}
             <li class="nav-item">
@@ -57,9 +63,7 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'auth_password_reset' %}">Reset Pasword</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'rango:search' %}">Search</a>
-            </li>
+        
         {% endif %}
         </ul>
       </div>
