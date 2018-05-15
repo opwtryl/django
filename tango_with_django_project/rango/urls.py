@@ -15,7 +15,9 @@ urlpatterns = [
     path('goto/', views.track_url, name='goto'),# 构造出重定向源URL
     path('register_profile/', views.register_profile, name='register_profile'),
     path('profile/<username>',views.profile,name='profile'),
-    path('profiles/',views.list_profiles,name='list_profiles')
+    path('profiles/',views.list_profiles,name='list_profiles'),
+    path('like_category/', views.like_category, name='like_category'),
+    path('suggest/', views.suggest_category, name='suggest_category')
 
     # path('register/', views.register, name='register'),
     # path('login/', views.user_login, name='login'),

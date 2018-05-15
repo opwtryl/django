@@ -9,6 +9,11 @@
 {% block body_block  %}
     {% if category  %}
         <h1>{{ category.name }}</h1>
+        <div><strong id="like_count">{{category.likes}}</strong> People like this category
+            {% if user.is_authenticated %}
+            <button class="btn btn-primary btn-sm" id="likes" data-catid="{{category.id}}" type="button">Like</button>
+        {% endif %}
+    </div>
         {% if pages %}
             <ul>
             {% for page in pages %}

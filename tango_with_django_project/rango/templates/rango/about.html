@@ -11,7 +11,13 @@
     <div>
             <a href='/rango/'>Main Page</a><br />
             <p>你已访问About页面{{ visits }}次</p>
-            
+ <button class="btn btn-primary" onclick="alert('You clicked the button using javascript.');">Click Me - I run javascript</button>    
+
+ <button class="btn btn-primary" id="about-btn">Click Me - I'm javascript on speed</button>    
+<p>This is a example</p>
+<p>This is another example</p>
+<div id="msg">Hello - I'm here for Jquery Example too</div>
+
             <table>
             <tr>
                 <td>  <img src="{% static "rango/images/MuDaMuDa.jpg" %}" alt="MuDaMuDa" />
@@ -21,4 +27,5 @@
             </tr>
             </table>
         </div>
+
 {% endblock body_block %}
