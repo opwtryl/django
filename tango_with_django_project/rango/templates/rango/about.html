@@ -1,0 +1,31 @@
+{% extends "rango/base.html" %}
+{% load static %}
+
+{% block title_block %}
+    <strong>This tutorial has been put together by opwtryl.</strong>
+{% endblock title_block %}
+
+{% block body_block %}
+    <strong>This tutorial has been put together by opwtryl.</strong>
+    
+    <div>
+            <a href='/rango/'>Main Page</a><br />
+            <p>你已访问About页面{{ visits }}次</p>
+ <button class="btn btn-primary" onclick="alert('You clicked the button using javascript.');">Click Me - I run javascript</button>    
+
+ <button class="btn btn-primary" id="about-btn">Click Me - I'm javascript on speed</button>    
+<p>This is a example</p>
+<p>This is another example</p>
+<div id="msg">Hello - I'm here for Jquery Example too</div>
+
+            <table>
+            <tr>
+                <td>  <img src="{% static "rango/images/MuDaMuDa.jpg" %}" alt="MuDaMuDa" />
+                </td>
+                <td>   <img src="{{ MEDIA_URL }}ORaORa.jpg" alt="ORaORa" />
+                </td>
+            </tr>
+            </table>
+        </div>
+
+{% endblock body_block %}
