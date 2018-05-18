@@ -7,10 +7,11 @@
 {% block body_block %}
 <div class="jumbotron">
     <h1 class="display-3"></h1>
+    <h1>Rango says</h1>
     {% if user.is_authenticated %}
-        <h1>howdy {{ user.username }}!</h1>
+        <p>howdy {{ user.username }}!</p>
     {% else %}
-        <h1>hey there partner</h1>
+        <p>hey there partner</p>
     {% endif %}
 </div>
 <div class="row marketing">
